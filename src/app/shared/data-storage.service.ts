@@ -33,6 +33,7 @@ export class DataStorageService {
       )
       .pipe(
         map(recipes => {
+          recipes = recipes ?? [];
           return recipes.map(recipe => {
             return {
               ...recipe,
